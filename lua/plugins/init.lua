@@ -19,7 +19,7 @@ return {
     end,
   },
   {
-    "nvim-neotest/nvim-nio"
+    "nvim-neotest/nvim-nio",
   },
   {
     "williamboman/mason.nvim",
@@ -87,5 +87,15 @@ return {
     config = function()
       require("leap").add_default_mappings(true)
     end,
+  },
+  {
+    "NeogitOrg/neogit",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+      "ibhagwan/fzf-lua", -- optional
+    },
+    config = true,
   },
 }
